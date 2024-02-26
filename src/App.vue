@@ -23,15 +23,18 @@ export default {
       </div>
       <i class="fa-solid fa-ellipsis-vertical"></i>
     </div>
-    <img class="cover" src="./assets/094.gif" alt="album gif" />
+    <img class="cover" src="./assets/giphy.gif" alt="album gif" />
     <div class="song">
       <h2 class="song__title">{{ info[2] }}</h2>
       <p class="song__description">{{ info[3] }}</p>
     </div>
     <div class="progress">
-      <progress class="progress__bar"></progress>
+      <div class="progress__bar">
+        &nbsp;
+        <div class="progress__bar-foreground">&nbsp;</div>
+      </div>
       <div class="progress__time">
-        <p class="progress__time-start">1:25</p>
+        <p class="progress__time-start">2:46</p>
         <p class="progress__time-end">3:34</p>
       </div>
     </div>
