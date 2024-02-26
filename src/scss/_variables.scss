@@ -1,8 +1,9 @@
 :root {
   //colors
   --background-color-darkest: #17171f;
-  --background-color-dark: #2b2b35;
-  --neutral-white: #f9f4f4;
+  --background-color-dark: rgba(43, 43, 53, 0.508);
+  --neutral-white: #f2f3f4;
+  --neutral-grey: #c1c1c1;
 
   //fonts
   --font-family: Poppins, sans-serif;
@@ -15,7 +16,7 @@
   //font-sizes
   --font-size-huge: 5rem;
   --font-size-big: 2rem;
-  --font-size-medium: 1.5rem;
+  --font-size-medium: 1.25rem;
   --font-size-normal: 1rem;
   --font-size-small: 0.75rem;
   --font-size-tiny: 0.5rem;
@@ -28,5 +29,10 @@
   --unit8: calc(var(--grid-unit) * 8);
   --unit12: calc(var(--grid-unit) * 12);
   --unit16: calc(var(--grid-unit) * 16);
+  --unit24: calc(var(--grid-unit) * 24);
   --unit32: calc(var(--grid-unit) * 32);
+  --letter-spacing: calc(var(--grid-unit) / 2);
+
+  //border-radius
+  --border-radius: var(--unit6);
 }

@@ -17,6 +17,16 @@ body {
   color: var(--neutral-white);
   background-color: var(--background-color-dark);
   padding: var(--unit8);
+  border-radius: var(--border-radius);
+  flex-direction: column;
+  gap: var(--unit8);
+  max-width: 425px;
+}
+
+.heading {
+  @include flex();
+  justify-content: space-between;
+  width: 100%;
 }
 
 .info {
@@ -24,9 +34,30 @@ body {
   &__title {
     font-weight: var(--font-weight-normal);
     text-transform: uppercase;
-    font-size: var(--font-size-normal);
+    font-size: var(--font-size-small);
+    color: var(--neutral-grey);
+    letter-spacing: var(--letter-spacing);
   }
   &__subtitle {
     font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    color: var(--neutral-white);
+  }
+}
+
+.cover {
+  margin-block: var(--unit8);
+}
+
+.song {
+  line-height: 140%;
+  &__title {
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-medium);
+    color: var(--neutral-white);
+  }
+  &__description {
+    font-size: var(--font-size-normal);
+    color: var(--neutral-grey);
   }
 }
