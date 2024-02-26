@@ -1,5 +1,34 @@
 @use "_variables.scss";
 
+@mixin flex() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
   font-family: var(--font-family);
+  background-color: var(--background-color-darkest);
+  @include flex();
+  height: 100vh;
+}
+
+.mediaplayer {
+  color: var(--neutral-white);
+  background-color: var(--background-color-dark);
+  padding: var(--unit8);
+}
+
+.info {
+  text-align: center;
+}
+
+.info__title {
+  font-weight: var(--font-weight-normal);
+  text-transform: uppercase;
+  font-size: var(--font-size-normal);
+}
+
+.info__subtitle {
+  font-size: var(--font-size-small);
 }

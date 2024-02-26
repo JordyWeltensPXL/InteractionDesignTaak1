@@ -1,6 +1,7 @@
 :root {
   //colors
-  --background-color-dark: #17171f;
+  --background-color-darkest: #17171f;
+  --background-color-dark: #2b2b35;
   --neutral-white: #f9f4f4;
 
   //fonts
@@ -16,8 +17,8 @@
   --font-size-big: 2rem;
   --font-size-medium: 1.5rem;
   --font-size-normal: 1rem;
-  --font-size-small: .75rem
-  --font-size-tiny: .5rem
+  --font-size-small: 0.75rem;
+  --font-size-tiny: 0.5rem;
 
   //spacings
   --grid-unit: 0.25rem;

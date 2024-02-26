@@ -10,8 +10,10 @@ export default {
 
 <template>
   <div class="mediaplayer">
-    <h2 class="info__title">{{ info[0] }}</h2>
-    <p class="info__subtitle">{{ info[1] }}</p>
+    <div class="info">
+      <h2 class="info__title">{{ info[0] }}</h2>
+      <p class="info__subtitle">{{ info[1] }}</p>
+    </div>
   </div>
 </template>
 
