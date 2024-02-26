@@ -21,14 +21,12 @@ body {
 
 .info {
   text-align: center;
-}
-
-.info__title {
-  font-weight: var(--font-weight-normal);
-  text-transform: uppercase;
-  font-size: var(--font-size-normal);
-}
-
-.info__subtitle {
-  font-size: var(--font-size-small);
+  &__title {
+    font-weight: var(--font-weight-normal);
+    text-transform: uppercase;
+    font-size: var(--font-size-normal);
+  }
+  &__subtitle {
+    font-size: var(--font-size-small);
+  }
 }
