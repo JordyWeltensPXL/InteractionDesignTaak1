@@ -1,0 +1,9 @@
+@use "_variables.scss" as *;
+
+
+#eyeButton {
+    z-index: 10;
+    background-color: #ff0000;
+    width: 2.5rem;
+    height: 2.5rem;
+}

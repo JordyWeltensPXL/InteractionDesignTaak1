@@ -1,5 +1,5 @@
 <script>
-import Button from './components/ButtonComponent.vue';
+import ButtonComponent from './components/ButtonComponent.vue';
 export default {
   data() {
     return {
@@ -15,22 +15,23 @@ export default {
   },
 
   computed: {
-    formattedStartTime(){
+    formattedStartTime() {
       const minutes = Math.floor(this.startTimeInSeconds / 60);
       const seconds = this.startTimeInSeconds % 60;
-      return `${minutes}:${seconds.toString().padStart(2,"0")}`
+      return `${minutes}:${seconds.toString().padStart(2, "0")}`
     },
   },
 
   methods: {
-  updateStartTime(){
-    this.startTimeInSeconds += 1
+    updateStartTime() {
+      this.startTimeInSeconds += 1
 
-    if (this.startTimeInSeconds <= this.songDuration) {
-      setTimeout(this.updateStartTime, 1000);
-    }}
+      if (this.startTimeInSeconds <= this.songDuration) {
+        setTimeout(this.updateStartTime, 1000);
+      }
+    }
   },
-  
+
   mounted() {
 
     this.updateStartTime();
@@ -51,13 +52,14 @@ export default {
 
   components() {
     return {
-      Button,
+      ButtonComponent,
     }
   }
 };
 </script>
 
 <template>
+  <!--<ButtonComponent id="eyeButton">1</ButtonComponent> deze component bolt niet--> 
   <div class="mediaplayer">
     <div class="heading">
       <i class="fa-solid fa-chevron-down"></i>
