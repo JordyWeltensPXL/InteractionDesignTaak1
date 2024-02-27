@@ -1,5 +1,5 @@
 <script>
-import ButtonComponent from './components/ButtonComponent.vue';
+//import ButtonComponent from './components/ButtonComponent.vue';
 export default {
   data() {
     return {
@@ -50,16 +50,17 @@ export default {
     }, songDuration * 10);
   },
 
-  components() {
-    return {
-      ButtonComponent,
-    }
-  }
+  //components() {
+  //  return {
+  //    ButtonComponent,
+  //  }
+  //}
 };
 </script>
 
 <template>
   <!--<ButtonComponent id="eyeButton">1</ButtonComponent> deze component bolt niet--> 
+  <button id="eyeButton"><i class="fa-regular fa-eye"></i></button>
   <div class="mediaplayer">
     <div class="heading">
       <i class="fa-solid fa-chevron-down"></i>
