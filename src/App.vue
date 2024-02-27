@@ -10,6 +10,43 @@ export default {
       ],
     };
   },
+
+  methods(){
+  const startTimeElement = document.getElementById("start-time");
+  let currentTimeInSeconds = 0;
+
+  function updateStartTime() {
+    const minutes = Math.floor(currentTimeInSeconds / 60);
+    const seconds = currentTimeInSeconds % 60;
+    startTimeElement.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}`;
+    currentTimeInSeconds += 1;
+
+    if (currentTimeInSeconds <= 227) {
+      setTimeout(updateStartTime, 1000); // Update every second
+    }
+  }
+
+  updateStartTime(); // Start the countdown
+  },
+  
+  mounted() {
+    // Bereken de totale duur van het liedje in seconden (3 minuten en 34 seconden)
+    const songDuration = 3 * 60 + 48;
+
+    // Selecteer de progress bar
+    const progressBar = document.querySelector(".progress__bar-foreground");
+
+    // Animatie: breid de progress bar uit van 0% naar 100% in de duur van het liedje
+    let currentWidth = 0;
+    const interval = setInterval(() => {
+      currentWidth += 1;
+      progressBar.style.width = `${currentWidth}%`;
+
+      if (currentWidth >= 100) {
+        clearInterval(interval); // Stop de animatie als 100% is bereikt
+      }
+    }, songDuration * 10); // Verhoog elke 100 milliseconden
+  }
 };
 </script>
 
@@ -34,8 +71,8 @@ export default {
         <div class="progress__bar-foreground">&nbsp;</div>
       </div>
       <div class="progress__time">
-        <p class="progress__time-start">2:46</p>
-        <p class="progress__time-end">3:34</p>
+        <p class="progress__time-start" id="start-time">0:00</p>
+        <p class="progress__time-end">3:47</p>
       </div>
     </div>
     <div class="controls">
@@ -45,6 +82,11 @@ export default {
       <i class="fa-solid fa-forward-step fa-lg"></i>
       <i class="fa-solid fa-ban fa-sm"></i>
     </div>
+    <audio autoplay>
+      <source src="Gorillaz - Plastic Beach - Plastic Beach.mp3" type="audio/mpeg" />
+      <!-- Vervang de bovenstaande URL door de werkelijke URL van je liedje -->
+      Je browser ondersteunt geen audio.
+    </audio>
   </div>
 </template>
 
