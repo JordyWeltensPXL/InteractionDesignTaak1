@@ -18,22 +18,21 @@ export default {
     formattedStartTime() {
       const minutes = Math.floor(this.startTimeInSeconds / 60);
       const seconds = this.startTimeInSeconds % 60;
-      return `${minutes}:${seconds.toString().padStart(2, "0")}`
+      return `${minutes}:${seconds.toString().padStart(2, "0")}`;
     },
   },
 
   methods: {
     updateStartTime() {
-      this.startTimeInSeconds += 1
+      this.startTimeInSeconds += 1;
 
       if (this.startTimeInSeconds <= this.songDuration) {
         setTimeout(this.updateStartTime, 1000);
       }
-    }
+    },
   },
 
   mounted() {
-
     this.updateStartTime();
 
     const songDuration = 3 * 60 + 47;
@@ -59,8 +58,9 @@ export default {
 </script>
 
 <template>
-  <!--<ButtonComponent id="eyeButton">1</ButtonComponent> deze component bolt niet--> 
+  <!--<ButtonComponent id="eyeButton">1</ButtonComponent> deze component bolt niet-->
   <button id="eyeButton"><i class="fa-regular fa-eye"></i></button>
+  <div class="loader"></div>
   <div class="mediaplayer">
     <div class="heading">
       <i class="fa-solid fa-chevron-down"></i>
@@ -81,7 +81,9 @@ export default {
         <div class="progress__bar-foreground">&nbsp;</div>
       </div>
       <div class="progress__time">
-        <p class="progress__time-start" id="start-time">{{ formattedStartTime }}</p>
+        <p class="progress__time-start" id="start-time">
+          {{ formattedStartTime }}
+        </p>
         <p class="progress__time-end">3:47</p>
       </div>
     </div>
