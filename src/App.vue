@@ -59,7 +59,13 @@ export default {
 
 <template>
   <!--<ButtonComponent id="eyeButton">1</ButtonComponent> deze component bolt niet-->
-  <button id="eyeButton"><i class="fa-regular fa-eye"></i></button>
+<section class="buttons">
+
+<button class="spin circle"><i class="fa-regular fa-eye"></i></button>
+
+
+</section>
+
   <div class="loader"></div>
   <div class="mediaplayer">
     <div class="heading">
