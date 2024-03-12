@@ -1,5 +1,8 @@
 @use "_variables.scss" as *;
 
+/*body{
+    cursor: none;
+}*/
 
 .buttons {
     z-index: 10;
@@ -80,8 +83,8 @@
           transform 0.4s linear 0s,
           border-left-width 0s linear 0.35s; // Solid edge post-rotation
       }
+      animation: rotateAndBorder 4s linear infinite;
     }
-    
     .circle {
       border-radius: 100%;
       box-shadow: none;
@@ -91,4 +94,4 @@
         border-radius: 100%;
       }
     }
-}    
+}
