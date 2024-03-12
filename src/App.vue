@@ -35,7 +35,7 @@ export default {
   mounted() {
     this.updateStartTime();
 
-    const songDuration = 3 * 60 + 47;
+    const songDuration = 3 * 60 + 46;
     const progressBar = document.querySelector(".progress__bar-foreground");
 
     let currentWidth = 0;
@@ -59,12 +59,9 @@ export default {
 
 <template>
   <!--<ButtonComponent id="eyeButton">1</ButtonComponent> deze component bolt niet-->
-<section class="buttons">
-
-<button class="spin circle"><i class="fa-regular fa-eye"></i></button>
-
-
-</section>
+  <section class="buttons">
+    <div class="eyetracker spin circle"><i class="fa-regular fa-eye"></i></div>
+  </section>
 
   <div class="loader"></div>
   <div class="mediaplayer">
