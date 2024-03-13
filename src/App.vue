@@ -94,7 +94,7 @@ export default {
         <p class="progress__time-start" id="start-time">
           {{ formattedStartTime }}
         </p>
-        <p class="progress__time-end">3:47</p>
+        <p class="progress__time-end">3:48</p>
       </div>
     </div>
     <div class="controls">
