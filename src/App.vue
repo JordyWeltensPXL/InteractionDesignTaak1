@@ -59,17 +59,15 @@ export default {
 
 <template>
   <!--<ButtonComponent id="eyeButton">1</ButtonComponent> deze component bolt niet-->
- 
 
   <div class="loader"></div>
   <div class="mediaplayer">
-
-
     <section class="buttons">
-    <div class="eyetracker spin circle"><i class="fa-regular fa-eye"></i></div>
-  </section>
+      <div class="eyetracker spin circle">
+        <i class="fa-regular fa-eye"></i>
+      </div>
+    </section>
 
-  
     <div class="heading">
       <i class="fa-solid fa-chevron-down"></i>
       <div class="info">

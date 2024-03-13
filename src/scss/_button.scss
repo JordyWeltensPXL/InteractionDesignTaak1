@@ -12,8 +12,9 @@
   bottom: 14rem;
   width: 3.5rem;
   height: 3.5rem;
-
-  // Basic styles
+  position: absolute;
+  right: 15px;
+  bottom: 165px; // Basic styles
   .eyetracker {
     background: none;
     border: 0;
@@ -26,7 +27,6 @@
     font-weight: 700;
 
     // Required, since we're setting absolute on pseudo-elements
-    position: relative;
     vertical-align: middle;
 
     &::before,
