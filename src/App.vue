@@ -67,7 +67,7 @@ export default {
         <i class="fa-regular fa-eye"></i>
         
       <button class="button button1"><i class="fa-solid fa-comments"></i></button>
-      <button class="button button2"><i class="fa-solid fa-music"></i></button>
+      <button class="button button2 eyetrackermusic spinmusic circlemusic"><i class="fa-solid fa-music"></i></button>
       <button class="button button3"><i class="fa-solid fa-phone"></i></button>
       </div>
     </section>
