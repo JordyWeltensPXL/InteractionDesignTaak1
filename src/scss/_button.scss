@@ -13,7 +13,46 @@
   height: 3.5rem;
   position: absolute;
   right: 15px;
-  bottom: 165px; // Basic styles
+  bottom: 200px; // Basic styles jordy zijn bottom was 165px (moest het er bij jullie wackier uit zien fso, kusjes ;) )
+
+  .button {
+    transition: 0.3s all ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    border: none;
+    background-color: #404040;
+    color: white;
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .button1 {
+    top: -60px;
+    left: -50px;
+    transition-delay: 0.1s;
+  }
+  
+  .button2 {
+    top: 10px;
+    left: -100px;
+    transition-delay: 0.175s;
+  }
+  
+  .button3 {
+    top: 75px;
+    left: -50px;
+    transition-delay: 0.25s;
+  }
+  
+  .eyetracker:hover .button {
+    opacity: 1;
+  }
+
   .eyetracker {
     display: flex;
     justify-content: center;
