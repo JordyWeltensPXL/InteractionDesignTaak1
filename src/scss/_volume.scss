@@ -1,0 +1,65 @@
+@use "_variables.scss";
+
+.volume-control {
+  width: 300px;
+  border-radius: 15px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  position: absolute;
+  z-index: 10;
+  left: 13%;
+  top: 30%;
+  background-color: rgba(43, 43, 53, 0.959);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: none;
+  &:hover .volume-bar {
+    transition-delay: 0.5s;
+    width: 80%;
+  }
+  &:hover .volume-higher {
+    color: #00ff88;
+    border: #00ff88 2px solid;
+  }
+}
+
+.display {
+  display: flex;
+}
+
+.volume-title {
+  align-self: start;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.volume-buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.volume-btn {
+  transition: all 0.5s ease;
+  border: none;
+  background-color: transparent;
+  border: 2px solid #c1c1c1;
+  color: rgb(78, 78, 78);
+  width: 110px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.volume-bar {
+  transition: all 2s ease-out;
+  width: 20%;
+  align-self: start;
+  background: linear-gradient(90deg, #00ff88 0%, #61efff 100%);
+  height: 7px;
+  border-radius: 50px;
+}
+
+.volume-btn {
+  padding: 0.25rem 0.75rem;
+}

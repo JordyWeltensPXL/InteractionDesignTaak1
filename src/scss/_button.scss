@@ -1,8 +1,9 @@
 @use "_variables.scss" as *;
 
-/*body{
-    cursor: none;
-}*/
+// body,
+// button {
+//   cursor: none;
+// }
 
 .buttons {
   z-index: 10;
@@ -11,7 +12,6 @@
   bottom: 14rem;
   width: 3.5rem;
   height: 3.5rem;
-  position: absolute;
   right: 15px;
   bottom: 200px; // Basic styles jordy zijn bottom was 165px (moest het er bij jullie wackier uit zien fso, kusjes ;) )
 
@@ -20,7 +20,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 1.25rem;
     width: 3rem;
     height: 3rem;
     border-radius: 3rem;
@@ -30,25 +29,29 @@
     position: absolute;
     opacity: 0;
   }
-  
+
   .button1 {
     top: -60px;
     left: -50px;
     transition-delay: 0.1s;
   }
-  
+
   .button2 {
-    top: 10px;
+    top: 5px;
     left: -100px;
     transition-delay: 0.175s;
   }
-  
+
+  .test {
+    display: none;
+  }
+
   .button3 {
-    top: 75px;
+    top: 70px;
     left: -50px;
     transition-delay: 0.25s;
   }
-  
+
   .eyetracker:hover .button {
     opacity: 1;
   }
@@ -105,10 +108,10 @@
       border-right-color: #00ff88;
       border-bottom-color: #00ff88;
 
-      transition: border-top-color 0.15s linear,
+      transition: border-top-color 0.45s linear,
         // Stagger border appearances
-        border-right-color 0.15s linear 0.1s,
-        border-bottom-color 0.15s linear 0.2s;
+        border-right-color 0.45s linear 0.3s,
+        border-bottom-color 0.45s linear 0.6s;
     }
 
     &::after {
@@ -120,9 +123,9 @@
       border-left-width: 2px; // Solid edges, invisible borders
       border-right-width: 2px; // Solid edges, invisible borders
       transform: rotate(270deg); // Rotate around circle
-      transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s; // Solid edge post-rotation
+      transition: transform 1.2s linear 0s, border-left-width 0s linear 1.05s; // Solid edge post-rotation
     }
-    animation: rotateAndBorder 4s linear infinite;
+    animation: rotateAndBorder 12s linear infinite;
   }
   .circle {
     border-radius: 100%;
@@ -134,9 +137,7 @@
     }
   }
 
-
-
-//deze code is specifiek voor de muziek button van de eyetrack button!
+  //deze code is specifiek voor de muziek button van de eyetrack button!
 
   .eyetrackermusic {
     display: flex;
@@ -166,8 +167,6 @@
   }
 
   .spinmusic {
-    width: 3.5rem;
-    height: 3.5rem;
     padding: 0;
     background-color: #404040;
 

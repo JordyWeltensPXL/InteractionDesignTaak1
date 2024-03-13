@@ -11,6 +11,7 @@ export default {
         "Plastic Beach",
         "Gorillaz",
       ],
+      addDisplayClass: false,
     };
   },
 
@@ -28,6 +29,13 @@ export default {
 
       if (this.startTimeInSeconds <= this.songDuration) {
         setTimeout(this.updateStartTime, 1000);
+      }
+    },
+    addClassToElement() {
+      if (this.addDisplayClass === false) {
+        this.addDisplayClass = true;
+      } else if (this.addDisplayClass === true) {
+        this.addDisplayClass = false;
       }
     },
   },
@@ -59,16 +67,31 @@ export default {
 
 <template>
   <!--<ButtonComponent id="eyeButton">1</ButtonComponent> deze component bolt niet-->
-
-  <div class="loader"></div>
   <div class="mediaplayer">
+    <div :class="{ display: addDisplayClass }" class="volume-control">
+      <h2 class="volume-title">Volume control</h2>
+      <div class="volume-bar"></div>
+      <div class="volume-buttons">
+        <button class="volume-btn volume-lower">-</button>
+        <button class="volume-btn volume-higher">+</button>
+      </div>
+    </div>
     <section class="buttons">
       <div class="eyetracker spin circle">
         <i class="fa-regular fa-eye"></i>
-        
-      <button class="button button1"><i class="fa-solid fa-comments"></i></button>
-      <button class="button button2 eyetrackermusic spinmusic circlemusic"><i class="fa-solid fa-music"></i></button>
-      <button class="button button3"><i class="fa-solid fa-phone"></i></button>
+
+        <button class="button button1">
+          <i class="fa-solid fa-comments"></i>
+        </button>
+        <button
+          @click="addClassToElement"
+          class="button button2 eyetrackermusic spinmusic circlemusic"
+        >
+          <i class="fa-solid fa-music"></i>
+        </button>
+        <button class="button button3">
+          <i class="fa-solid fa-phone"></i>
+        </button>
       </div>
     </section>
 
