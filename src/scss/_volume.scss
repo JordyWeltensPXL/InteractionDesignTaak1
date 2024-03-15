@@ -16,10 +16,9 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: none;
   &:hover .volume-bar {
-    transition-delay: 0.5s;
     width: 80%;
   }
-  &:hover .volume-higher {
+  .volume-higher:hover {
     color: #00ff88;
     border: #00ff88 2px solid;
   }
@@ -44,8 +43,8 @@
   transition: all 0.5s ease;
   border: none;
   background-color: transparent;
-  border: 2px solid #c1c1c1;
-  color: rgb(78, 78, 78);
+  border: 2px solid #565656;
+  color: rgb(255, 255, 255);
   width: 110px;
   height: 40px;
   border-radius: 10px;

@@ -73,7 +73,9 @@ export default {
       <div class="volume-bar"></div>
       <div class="volume-buttons">
         <button class="volume-btn volume-lower">-</button>
-        <button class="volume-btn volume-higher">+</button>
+        <button @click="addClassToElement" class="volume-btn volume-higher">
+          +
+        </button>
       </div>
     </div>
     <section class="buttons">

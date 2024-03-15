@@ -28,6 +28,9 @@ body {
   gap: var(--unit8);
   max-width: 400px;
   position: relative;
+
+  // Aanzetten voor zwart wit versie
+  // filter: grayscale(100%);
 }
 
 .heading {
