@@ -79,8 +79,10 @@ export default {
       </div>
     </div>
     <section class="buttons">
-      <div class="eyetracker spin circle">
-        <i class="fa-regular fa-eye"></i>
+      <div class="eyetracker-container">
+        <div class="eyetracker spin circle">
+          <i class="fa-regular fa-eye"></i>
+        </div>
 
         <button class="button button1">
           <i class="fa-solid fa-comments"></i>
